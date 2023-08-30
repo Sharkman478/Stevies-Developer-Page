@@ -1,21 +1,70 @@
-/* :root */
-
+:root{
+    --yellow: rgb(229, 255, 0);
+}
+main{
+    background-color: #1777e7;
+}
 .header{
     font-family: 'Times New Roman', Times, serif;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color: rgb(47, 134, 168);
     color: white;
     padding: 2.5%;
 }
+.header img{
+    margin-right: 50%;
+}
 
 .header h1{
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
     margin-right: auto;
+    margin-bottom: auto;
+    font-size: 40px;
+    color: var(--yellow);
 }
 
 #header-photo{
-    width: 100px;
-    height: 100px;
+    display: inline;
+    align-self: flex-start;
+    align-items: baseline;
+    width: 15%;
+    height: 15%;
+}
+.header nav{
+    margin-left: auto;
+}
+.header nav ul li {
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 25px;
+}
+a{
+    color: var(--yellow);
+    text-decoration: solid;
+    font-size: 20px;
+}
+#About-Me{
+    border-style: ridge;
+    border-width: 1px;
+    border-radius: 10px 10px 10px 10px;
+    border-color: black;
+    background-color: gray;
+    flex: 0 0 100px;
+    flex-shrink: initial;
+    padding: 10px;
+    transform: 0 0 300px;
+    box-shadow: 4px 2px 5px rgb(29, 29, 29);
+    margin: 5%;
+    width: 25%;
+    margin-top: auto;
+}
+#About-Me{
+    text-align: center;
+}
+#About-Me h2{
+    font-size: 150%;
+    text-align: left;
+    margin-left: 0px;
 }
