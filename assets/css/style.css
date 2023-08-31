@@ -17,20 +17,19 @@ main{
 }
 
 .header h1{
-    display: flex;
-    justify-content: flex-start;
     margin-right: auto;
     margin-bottom: auto;
     font-size: 40px;
     color: var(--yellow);
 }
-
+/* This is for the header photo that is in the header */
 #header-photo{
     display: inline;
     align-self: flex-start;
     align-items: baseline;
     width: 15%;
     height: 15%;
+    flex-shrink: 0;
 }
 .header nav{
     margin-left: auto;
@@ -40,6 +39,7 @@ main{
     margin-top: 5px;
     margin-left: 25px;
 }
+/* This is for the links in nav to change their color */
 a{
     color: var(--yellow);
     text-decoration: solid;
@@ -50,21 +50,79 @@ a{
     border-width: 1px;
     border-radius: 10px 10px 10px 10px;
     border-color: black;
-    background-color: gray;
+    background-color: rgb(151, 151, 151);
     flex: 0 0 100px;
     flex-shrink: initial;
     padding: 10px;
     transform: 0 0 300px;
     box-shadow: 4px 2px 5px rgb(29, 29, 29);
     margin: 5%;
-    width: 25%;
+    width: 50%;
     margin-top: auto;
+    margin-left: 0px;
 }
-#About-Me{
-    text-align: center;
-}
+
 #About-Me h2{
     font-size: 150%;
-    text-align: left;
     margin-left: 0px;
+}
+
+#Work{
+    border-style: ridge;
+    border-width: 1.5px;
+    border-radius: 10px 10px 10px 10px;
+    width: 40%;
+    flex: 0 0 200px;
+    flex-shrink: initial;
+    transform: 0 0 300px;
+ } 
+/* The position relative is used for the text on the inside of the image that stays with the image when it is moved around. */
+#Work img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
+    padding: .5px;
+}
+/* These images are placeholder images for the project because I only have one project */
+.img-label h2{
+    text-decoration: underline;
+    position: absolute;
+    display: flex;
+    justify-content: left;
+    color: white;
+    z-index: 1;
+    font-size: 25px;
+    margin-top: 2px;
+    margin-left: 3px;
+    padding: 3px;
+}
+/* This if for the color of the images titles */
+#small-picture-1 h2, #small-picture-2 h2{
+    color: var(--yellow);
+}
+#small-picture-1 img, #small-picture-2 img{
+    width: 15%;
+    border-style: groove;
+    border-width: 2px;
+    border-radius: 2px 2px 2px 2px;
+    background-color: white;
+}
+/* This is for the hovering when the cursor is moved over the image */
+#star-citizen:hover, #small-picture-1:hover img, #small-picture-2:hover img {
+    cursor: pointer;
+    background-color: var(--yellow);
+    border-width: .5px 0;
+}
+.footer h2{
+    text-align: center;
+    font-size: 20px;
+    background-color: #2f86a8;
+    color: var(--yellow);
+}
+/* This is for the max widtht when the screen shrinks and enlarges */
+@media screen and (max-width: 768px) {
+    .header{
+        flex-direction: column;
+    }
 }
